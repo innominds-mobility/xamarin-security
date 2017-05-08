@@ -99,9 +99,21 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AddNotes.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AddNotes.imageset\plus%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AddNotes.imageset\plus%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AddNotes.imageset\plus%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\back%401x.png" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\back%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Back.imageset\back%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\AddNotes.imageset\" />
+    <Folder Include="Assets.xcassets\Back.imageset\" />
+    <Folder Include="TableSource\" />
+    <Folder Include="ViewController\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -114,9 +126,18 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="TableSource\NotesTableSource.cs" />
+    <Compile Include="ViewController\AuthenticateViewController.cs" />
+    <Compile Include="ViewController\AuthenticateViewController.designer.cs">
+      <DependentUpon>AuthenticateViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\NotesViewController.cs" />
+    <Compile Include="ViewController\NotesViewController.designer.cs">
+      <DependentUpon>NotesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\NotesDetailViewController.cs" />
+    <Compile Include="ViewController\NotesDetailViewController.designer.cs">
+      <DependentUpon>NotesDetailViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

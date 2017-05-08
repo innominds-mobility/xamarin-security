@@ -1,40 +1,332 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
-	<dependencies>
-		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735" />
-	</dependencies>
-	<scenes>
-		<!--View Controller-->
-		<scene sceneID="tne-QT-ifu">
-			<objects>
-				<viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-					<layoutGuides>
-						<viewControllerLayoutGuide type="top" id="y3c-jy-aDJ" />
-						<viewControllerLayoutGuide type="bottom" id="wfy-db-euE" />
-					</layoutGuides>
-					<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-						<rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-						<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
-						<subviews>
-							<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx">
-								<rect key="frame" x="224" y="285" width="152" height="30" />
-								<state key="normal" title="Hello World, Click Me!">
-									<color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite" />
-								</state>
-							</button>
-						</subviews>
-						<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
-						<constraints>
-							<constraint firstItem="oBE-Ac-vcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HiD-uS-i16" />
-							<constraint firstItem="oBE-Ac-vcx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YgX-7e-bMc" />
-						</constraints>
-					</view>
-					<connections>
-						<outlet property="Button" destination="oBE-Ac-vcx" id="OkX-0Z-gth" />
-					</connections>
-				</viewController>
-				<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder" />
-			</objects>
-		</scene>
-	</scenes>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="13">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="12">
+            <objects>
+                <navigationController id="13" sceneMemberID="viewController" navigationBarHidden="YES">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="15">
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="217" destination="22" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527" y="21"/>
+        </scene>
+        <scene sceneID="21">
+            <objects>
+                <viewController id="22" sceneMemberID="viewController" customClass="AuthenticateViewController" storyboardIdentifier="AuthenticateViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19"/>
+                        <viewControllerLayoutGuide type="bottom" id="20"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue id="115" destination="48" kind="show" identifier="AuthenticationSegue"/>
+                    </connections>
+                    <navigationItem title="Title" id="216" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="23"/>
+        </scene>
+        <scene sceneID="47">
+            <objects>
+                <viewController id="48" sceneMemberID="viewController" customClass="NotesViewController" storyboardIdentifier="NotesViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="45"/>
+                        <viewControllerLayoutGuide type="bottom" id="46"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="49">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="52" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="65" translatesAutoresizingMaskIntoConstraints="NO" adjustsImageWhenDisabled="NO" adjustsImageWhenHighlighted="NO">
+                                        <rect key="frame" x="10" y="10" width="50" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Back" image="Back">
+                                            <color key="titleShadowColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                            <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        </state>
+                                        <constraints>
+                                            <constraint id="72" firstItem="65" firstAttribute="width" constant="50"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="66" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="540" y="10" width="50" height="30"/>
+                                        <state key="normal" image="AddNotes">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <constraints>
+                                            <constraint id="75" firstItem="66" firstAttribute="width" constant="50"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="NewNoteHandler:" destination="48" id="182" eventType="touchUpInside"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="67" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="70" y="0.0" width="460" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="57" firstItem="52" firstAttribute="height" constant="50"/>
+                                    <constraint id="68" firstItem="65" firstAttribute="leading" secondItem="52" secondAttribute="leading" constant="10"/>
+                                    <constraint id="70" firstItem="65" firstAttribute="top" secondItem="52" secondAttribute="top" constant="10"/>
+                                    <constraint id="71" firstItem="52" firstAttribute="bottom" secondItem="65" secondAttribute="bottom" constant="10"/>
+                                    <constraint id="73" firstItem="66" firstAttribute="top" secondItem="52" secondAttribute="top" constant="10"/>
+                                    <constraint id="74" firstItem="52" firstAttribute="bottom" secondItem="66" secondAttribute="bottom" constant="10"/>
+                                    <constraint id="76" firstItem="52" firstAttribute="trailing" secondItem="66" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="77" firstItem="67" firstAttribute="leading" secondItem="65" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="78" firstItem="66" firstAttribute="leading" secondItem="67" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="79" firstItem="67" firstAttribute="top" secondItem="52" secondAttribute="top"/>
+                                    <constraint id="80" firstItem="67" firstAttribute="bottom" secondItem="52" secondAttribute="bottom"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="58" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="59" reuseIdentifier="notescell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="59" id="60">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="10" y="0.0" width="520" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="82" firstItem="81" firstAttribute="top" secondItem="60" secondAttribute="top"/>
+                                                <constraint id="83" firstItem="81" firstAttribute="leading" secondItem="60" secondAttribute="leading" constant="10"/>
+                                                <constraint id="84" firstItem="81" firstAttribute="bottom" secondItem="60" secondAttribute="bottom"/>
+                                                <constraint id="85" firstItem="60" firstAttribute="trailing" secondItem="81" secondAttribute="trailing" constant="70"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="53" firstItem="52" firstAttribute="top" secondItem="49" secondAttribute="top" constant="20"/>
+                            <constraint id="54" firstItem="52" firstAttribute="leading" secondItem="49" secondAttribute="leading"/>
+                            <constraint id="55" firstItem="52" firstAttribute="trailing" secondItem="49" secondAttribute="trailing"/>
+                            <constraint id="61" firstItem="58" firstAttribute="top" secondItem="52" secondAttribute="bottom"/>
+                            <constraint id="62" firstItem="58" firstAttribute="trailing" secondItem="49" secondAttribute="trailing"/>
+                            <constraint id="63" firstItem="58" firstAttribute="leading" secondItem="49" secondAttribute="leading"/>
+                            <constraint id="64" firstItem="58" firstAttribute="bottom" secondItem="49" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notesTableView" destination="58" id="name-outlet-58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="23"/>
+        </scene>
+        <scene sceneID="119">
+            <objects>
+                <viewController id="120" sceneMemberID="viewController" customClass="NotesDetailViewController" storyboardIdentifier="NotesDetailViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="117"/>
+                        <viewControllerLayoutGuide type="bottom" id="118"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="121">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="129" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="134" translatesAutoresizingMaskIntoConstraints="NO" adjustsImageWhenDisabled="NO" adjustsImageWhenHighlighted="NO">
+                                        <rect key="frame" x="10" y="10" width="70" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Notes" image="Back">
+                                            <color key="titleShadowColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                            <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        </state>
+                                        <constraints>
+                                            <constraint id="135" firstItem="134" firstAttribute="width" constant="70"/>
+                                        </constraints>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="140" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="90" y="0.0" width="440" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="133" firstItem="129" firstAttribute="height" constant="50"/>
+                                    <constraint id="136" firstItem="134" firstAttribute="leading" secondItem="129" secondAttribute="leading" constant="10"/>
+                                    <constraint id="137" firstItem="134" firstAttribute="top" secondItem="129" secondAttribute="top" constant="10"/>
+                                    <constraint id="138" firstItem="129" firstAttribute="bottom" secondItem="134" secondAttribute="bottom" constant="10"/>
+                                    <constraint id="141" firstItem="140" firstAttribute="top" secondItem="129" secondAttribute="top"/>
+                                    <constraint id="142" firstItem="140" firstAttribute="bottom" secondItem="129" secondAttribute="bottom"/>
+                                    <constraint id="143" firstItem="140" firstAttribute="leading" secondItem="134" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="144" firstItem="129" firstAttribute="trailing" secondItem="140" secondAttribute="trailing" constant="70"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="145" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="231" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="HandleKeyboard:" destination="120" id="236" eventType="touchUpInside"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="150" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Title">
+                                        <rect key="frame" x="30" y="30" width="540" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18" weight="semibold"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" returnKeyType="next"/>
+                                        <constraints>
+                                            <constraint id="151" firstItem="150" firstAttribute="height" constant="40"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.8" green="0.8" blue="0.8" alpha="1"/>
+                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="156" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="30" y="100" width="540" height="320"/>
+                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" id="161" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="30" y="450" width="540" height="50"/>
+                                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="170" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
+                                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="semibold"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="SaveNoteHandler:" destination="120" id="180" eventType="touchUpInside"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="171" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="285" y="0.0" width="255" height="50"/>
+                                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="semibold"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="DeleteNoteHandler:" destination="120" id="181" eventType="touchUpInside"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint id="167" firstItem="161" firstAttribute="height" constant="50"/>
+                                            <constraint id="172" firstItem="170" firstAttribute="top" secondItem="161" secondAttribute="top"/>
+                                            <constraint id="173" firstItem="170" firstAttribute="leading" secondItem="161" secondAttribute="leading"/>
+                                            <constraint id="174" firstItem="170" firstAttribute="bottom" secondItem="161" secondAttribute="bottom"/>
+                                            <constraint id="175" firstItem="171" firstAttribute="leading" secondItem="170" secondAttribute="trailing" constant="30"/>
+                                            <constraint id="176" firstItem="171" firstAttribute="top" secondItem="161" secondAttribute="top"/>
+                                            <constraint id="177" firstItem="171" firstAttribute="bottom" secondItem="161" secondAttribute="bottom"/>
+                                            <constraint id="178" firstItem="171" firstAttribute="trailing" secondItem="161" secondAttribute="trailing"/>
+                                            <constraint id="179" firstItem="170" firstAttribute="width" secondItem="171" secondAttribute="width"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="152" firstItem="150" firstAttribute="top" secondItem="145" secondAttribute="top" constant="30"/>
+                                    <constraint id="153" firstItem="150" firstAttribute="leading" secondItem="145" secondAttribute="leading" constant="30"/>
+                                    <constraint id="154" firstItem="145" firstAttribute="trailing" secondItem="150" secondAttribute="trailing" constant="30"/>
+                                    <constraint id="157" firstItem="156" firstAttribute="leading" secondItem="145" secondAttribute="leading" constant="30"/>
+                                    <constraint id="158" firstItem="156" firstAttribute="top" secondItem="150" secondAttribute="bottom" constant="30"/>
+                                    <constraint id="159" firstItem="145" firstAttribute="trailing" secondItem="156" secondAttribute="trailing" constant="30"/>
+                                    <constraint id="162" firstItem="161" firstAttribute="leading" secondItem="145" secondAttribute="leading" constant="30"/>
+                                    <constraint id="163" firstItem="145" firstAttribute="trailing" secondItem="161" secondAttribute="trailing" constant="30"/>
+                                    <constraint id="164" firstItem="161" firstAttribute="top" secondItem="156" secondAttribute="bottom" constant="30"/>
+                                    <constraint id="169" firstItem="145" firstAttribute="bottom" secondItem="161" secondAttribute="bottom" constant="30"/>
+                                    <constraint id="232" firstItem="231" firstAttribute="top" secondItem="145" secondAttribute="top"/>
+                                    <constraint id="233" firstItem="231" firstAttribute="trailing" secondItem="145" secondAttribute="trailing"/>
+                                    <constraint id="234" firstItem="231" firstAttribute="leading" secondItem="145" secondAttribute="leading"/>
+                                    <constraint id="235" firstItem="231" firstAttribute="bottom" secondItem="145" secondAttribute="bottom"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="130" firstItem="129" firstAttribute="top" secondItem="121" secondAttribute="top" constant="20"/>
+                            <constraint id="131" firstItem="129" firstAttribute="leading" secondItem="121" secondAttribute="leading"/>
+                            <constraint id="132" firstItem="129" firstAttribute="trailing" secondItem="121" secondAttribute="trailing"/>
+                            <constraint id="146" firstItem="145" firstAttribute="bottom" secondItem="121" secondAttribute="bottom"/>
+                            <constraint id="147" firstItem="145" firstAttribute="trailing" secondItem="121" secondAttribute="trailing"/>
+                            <constraint id="148" firstItem="145" firstAttribute="leading" secondItem="121" secondAttribute="leading"/>
+                            <constraint id="149" firstItem="145" firstAttribute="top" secondItem="129" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Title" destination="150" id="name-outlet-150"/>
+                        <outlet property="Description" destination="156" id="name-outlet-156"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="122" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddNotes" width="30" height="30"/>
+        <image name="Back" width="20" height="20"/>
+    </resources>
+    <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
 </document>
