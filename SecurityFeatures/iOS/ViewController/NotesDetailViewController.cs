@@ -18,6 +18,7 @@ namespace SecurityFeatures.iOS
 		{
 			base.ViewDidLoad();
 			Title.Text = currentNote.name;
+			Description.Text = currentNote.description;
 			//Description.Text = currentNote.description;/
 		}
 
@@ -53,7 +54,7 @@ namespace SecurityFeatures.iOS
 			Delegate.DeleteTask(currentNote);
 		}
 
-	partial void HandleKeyboard(UIButton sender)
+		partial void HandleKeyboard(UIButton sender)
 		{
 			Title.ResignFirstResponder();
 			Description.ResignFirstResponder();

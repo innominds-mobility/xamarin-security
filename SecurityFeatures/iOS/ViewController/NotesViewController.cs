@@ -29,10 +29,14 @@ namespace SecurityFeatures.iOS
 			var newId = notes[notes.Count - 1].id + 1;
 			var newNote = new Notes() { id = newId };
 			notes.Add(newNote);
+			NavigateToDetail(newNote);
+		}
 
-			// then open the detail view to edit notet
+		public void NavigateToDetail(Notes note) 
+		{
+		// then open the detail view to edit notet
 			var detail = Storyboard.InstantiateViewController("NotesDetailViewController") as NotesDetailViewController;
-			detail.SetTask(this, newNote);
+			detail.SetTask(this, note);
 			NavigationController.PushViewController(detail, true);
 		}
 
@@ -59,7 +63,7 @@ namespace SecurityFeatures.iOS
 			base.ViewWillAppear(animated);
 
 			// bind every time, to reflect in the table vieww
-			notesTableView.Source = new NotesTableSource(notes.ToArray());
+			notesTableView.Source = new NotesTableSource(notes.ToArray(), this);
 		}
 
 		public override void DidReceiveMemoryWarning()
