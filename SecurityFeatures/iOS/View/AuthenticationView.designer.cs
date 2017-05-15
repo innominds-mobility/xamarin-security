@@ -11,22 +11,27 @@ using UIKit;
 
 namespace SecurityFeatures.iOS
 {
-    [Register ("NotesViewController")]
-    partial class NotesViewController
+    [Register ("AuthenticationView")]
+    partial class AuthenticationView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView notesTableView { get; set; }
+        UIKit.UIButton loginBtn { get; set; }
 
-        [Action ("NewNoteHandler:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void NewNoteHandler (UIKit.UIButton sender);
+        UIKit.UILabel touchIdStatusLbl { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (notesTableView != null) {
-                notesTableView.Dispose ();
-                notesTableView = null;
+            if (loginBtn != null) {
+                loginBtn.Dispose ();
+                loginBtn = null;
+            }
+
+            if (touchIdStatusLbl != null) {
+                touchIdStatusLbl.Dispose ();
+                touchIdStatusLbl = null;
             }
         }
     }

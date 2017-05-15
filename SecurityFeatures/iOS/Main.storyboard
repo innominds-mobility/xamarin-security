@@ -14,12 +14,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="217" destination="22" kind="relationship" relationship="rootViewController"/>
+                        <segue id="343" destination="48" kind="relationship" relationship="rootViewController"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527" y="21"/>
+            <point key="canvasLocation" x="-565" y="14"/>
         </scene>
         <scene sceneID="21">
             <objects>
@@ -33,9 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue id="115" destination="48" kind="show" identifier="AuthenticationSegue"/>
-                    </connections>
+                    <connections/>
                     <navigationItem title="Title" id="216" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,7 +42,7 @@
         </scene>
         <scene sceneID="47">
             <objects>
-                <viewController id="48" sceneMemberID="viewController" customClass="NotesViewController" storyboardIdentifier="NotesViewController">
+                <viewController id="48" sceneMemberID="viewController" customClass="NotesView" storyboardIdentifier="NotesView">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="45"/>
                         <viewControllerLayoutGuide type="bottom" id="46"/>
@@ -144,6 +142,7 @@
                     <connections>
                         <outlet property="notesTableView" destination="58" id="name-outlet-58"/>
                     </connections>
+                    <navigationItem title="Title" id="342" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,11 +11,19 @@ using UIKit;
 
 namespace SecurityFeatures.iOS
 {
-    [Register ("AuthenticateViewController")]
-    partial class AuthenticateViewController
+    [Register ("DashboardView")]
+    partial class DashboardView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton logoutBtn { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (logoutBtn != null) {
+                logoutBtn.Dispose ();
+                logoutBtn = null;
+            }
         }
     }
 }

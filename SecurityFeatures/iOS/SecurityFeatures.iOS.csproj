@@ -89,6 +89,27 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SecurityFeatures\SecurityFeatures.csproj">
@@ -112,33 +133,34 @@
     <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\AddNotes.imageset\" />
     <Folder Include="Assets.xcassets\Back.imageset\" />
-    <Folder Include="TableSource\" />
-    <Folder Include="ViewController\" />
+    <Folder Include="View\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="View\AuthenticationView.xib" />
+    <InterfaceDefinition Include="View\DashboardView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="TableSource\NotesTableSource.cs" />
-    <Compile Include="ViewController\AuthenticateViewController.cs" />
-    <Compile Include="ViewController\AuthenticateViewController.designer.cs">
-      <DependentUpon>AuthenticateViewController.cs</DependentUpon>
+    <Compile Include="View\AuthenticationView.cs" />
+    <Compile Include="View\AuthenticationView.designer.cs">
+      <DependentUpon>AuthenticationView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewController\NotesViewController.cs" />
-    <Compile Include="ViewController\NotesViewController.designer.cs">
-      <DependentUpon>NotesViewController.cs</DependentUpon>
+    <Compile Include="View\DashboardView.cs" />
+    <Compile Include="View\DashboardView.designer.cs">
+      <DependentUpon>DashboardView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewController\NotesDetailViewController.cs" />
-    <Compile Include="ViewController\NotesDetailViewController.designer.cs">
-      <DependentUpon>NotesDetailViewController.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Utilities\TouchIDAuthentication.cs" />
+    <Compile Include="CustomPresenter.cs" />
+    <Compile Include="Setup.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
