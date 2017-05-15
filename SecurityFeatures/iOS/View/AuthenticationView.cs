@@ -20,69 +20,30 @@ namespace SecurityFeatures.iOS
 			this.CreateBinding(touchIdStatusLbl).To((AuthenticationViewModel vm) => vm.AuthenticationText).Apply();
 			loginBtn.TouchDown += delegate
 			{
-				AuthenticateUser();
+				TouchIDAuthentication.AuthenticateUser(this);
 			};
 		}
 
-		/// <summary>
-		/// Authenticates the user.
-		/// </summary>
-		private void AuthenticateUser()
-		{
-			var viewModel = (AuthenticationViewModel)this.ViewModel;
-			var context = new LAContext();
-			NSError AuthError;
-			var authenticationReason = new NSString("Authentication is needed to access the application");
-
-			if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError))
-			{
-				var replyHandler = new LAContextReplyHandler((success, error) =>
-				{
-					this.InvokeOnMainThread(() =>
-					{
-						if (viewModel != null)
-						{
-							if (success)
-							{
-								viewModel.OnAuthenticationSuccess();
-								Console.WriteLine("You logged in!");
-							}
-							else {
-								viewModel.OnAuthenticationFailure();
-								//Show fallback mechanism her
-								//showPasswordAlert();
-							}
-						}
-					});
-
-				});
-				context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, authenticationReason, replyHandler);
-			}
-			else {
-				viewModel.OnAuthenticationFailure();
-			}
-		}
-
-		/// <summary>
-		/// Shows the password alert.
-		/// </summary>
-		private void showPasswordAlert()
-		{
-			var passwordAlert = new UIAlertView("SecurityFeature", "Please type your password", null, "Cancel", "Ok");
-			passwordAlert.AlertViewStyle = UIAlertViewStyle.SecureTextInput;
-			passwordAlert.Show();
-			passwordAlert.Clicked += (object senders, UIButtonEventArgs index) =>
-				{
-					if (index.ButtonIndex == 0)
-					{
-						// do something if Cancel
-					}
-					else
-					{
-						// Do something if Ok
-					}
-				};
-		}
+		///// <summary>
+		///// Shows the password alert.
+		///// </summary>
+		//private void showPasswordAlert()
+		//{
+		//	var passwordAlert = new UIAlertView("SecurityFeature", "Please type your password", null, "Cancel", "Ok");
+		//	passwordAlert.AlertViewStyle = UIAlertViewStyle.SecureTextInput;
+		//	passwordAlert.Show();
+		//	passwordAlert.Clicked += (object senders, UIButtonEventArgs index) =>
+		//		{
+		//			if (index.ButtonIndex == 0)
+		//			{
+		//				// do something if Cancel
+		//			}
+		//			else
+		//			{
+		//				// Do something if Ok
+		//			}
+		//		};
+		//}
 
 		public override void DidReceiveMemoryWarning()
 		{
