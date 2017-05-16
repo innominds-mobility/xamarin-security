@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace SecurityFeatures.Droid
 {
-	[Activity(Label = "SecurityFeatures", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "SecurityFeatures", Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
 		int count = 1;

@@ -105,6 +105,8 @@
     <Compile Include="View\DashboardView.cs" />
     <Compile Include="View\AuthenticationView.cs" />
     <Compile Include="Utilities\FingerprintAuthentication.cs" />
+    <Compile Include="Utilities\CryptoObjectHelper.cs" />
+    <Compile Include="View\BaseActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

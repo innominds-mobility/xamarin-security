@@ -13,8 +13,8 @@ using Android.Widget;
 
 namespace SecurityFeatures.Droid
 {
-	[Activity(Label = "AuthenticationView")]
-	public class AuthenticationView : Activity
+	[Activity(Label = "AuthenticationView", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+	public class AuthenticationView : BaseActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -23,8 +23,15 @@ namespace SecurityFeatures.Droid
 			// Create your application here
 			SetContentView(Resource.Layout.Layout_Authentication);
 
-			//check fingerprint is available on the device or not
-			FingerprintAuthentication.fingerPrintContext(this);
+			Button loginBtn = FindViewById<Button>(Resource.Id.loginBtn);
+			loginBtn.Click += (sender, e) =>
+			{
+				// Perform action on click
+				//check fingerprint is available on the device or not
+				var authenticationObj = new FingerprintAuthentication();
+				authenticationObj.fingerPrintDetection(this);
+			};
+
 		}
 	}
 }
