@@ -34,10 +34,12 @@
     <Compile Include="ViewModel\AuthenticationViewModel.cs" />
     <Compile Include="ViewModel\DashboardViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="Interface\IAuthentication.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModel\" />
+    <Folder Include="Interface\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">

@@ -83,7 +83,6 @@ namespace SecurityFeatures.Droid
 				{
 					// Calling DoFinal on the Cipher ensures that the encryption worked.
 					Log.Debug(TAG, "Fingerprint authentication succeeded");
-
 					ReportSuccess();
 				}
 				catch (BadPaddingException bpe)
@@ -135,9 +134,7 @@ namespace SecurityFeatures.Droid
 			// if the user cancelled the scan, this will raise errorID #5. We don't want to
 			// report that, we'll just ignore it as that event is a part of the workflow.
 			bool reportError = (errMsgId == (int)FingerprintState.ErrorCanceled);
-
 			string debugMsg = string.Format("OnAuthenticationError: {0}:`{1}`.", errMsgId, errString);
-
 			Log.Debug(TAG, debugMsg);
 		}
 

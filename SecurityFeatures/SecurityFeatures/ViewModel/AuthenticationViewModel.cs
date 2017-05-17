@@ -2,7 +2,7 @@
 
 namespace SecurityFeatures
 {
-	public class AuthenticationViewModel: BaseViewModel
+	public class AuthenticationViewModel: BaseViewModel, IAuthentication
 	{
 		public AuthenticationViewModel()
 		{
@@ -41,12 +41,14 @@ namespace SecurityFeatures
 
 		public void OnAuthenticationSuccess()
 		{
+			//Handle the callback for authentication success response
 			AuthenticationStatus = true;
 			ShowViewModel<DashboardViewModel>();
 		}
 
 		public void OnAuthenticationFailure()
 		{
+			//Handle the callback for authentication failure response
 			AuthenticationStatus = false;
 		}
 	}
