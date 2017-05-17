@@ -9,6 +9,7 @@ namespace SecurityFeatures
 			AuthenticationText = "";
 		}
 
+		#region Properties
 		private string _authenticationText;
 		public string AuthenticationText
 		{
@@ -38,7 +39,9 @@ namespace SecurityFeatures
 				RaisePropertyChanged(() => AuthenticationStatus);
 			}
 		}
+		#endregion
 
+		#region IAuthentication callbacks
 		public void OnAuthenticationSuccess()
 		{
 			//Handle the callback for authentication success response
@@ -51,5 +54,6 @@ namespace SecurityFeatures
 			//Handle the callback for authentication failure response
 			AuthenticationStatus = false;
 		}
+		#endregion
 	}
 }

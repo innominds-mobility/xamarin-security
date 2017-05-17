@@ -20,7 +20,6 @@ namespace SecurityFeatures.iOS
 			var context = new LAContext();
 			NSError AuthError;
 			var authenticationReason = new NSString("Authentication is needed to access the application");
-
 			if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError))
 			{
 				var replyHandler = new LAContextReplyHandler((success, error) =>
@@ -31,17 +30,16 @@ namespace SecurityFeatures.iOS
 						{
 							if (success)
 							{
+								//Calling the success handler
 								viewModel.OnAuthenticationSuccess();
 								Console.WriteLine("You logged in!");
 							}
 							else {
+								//Calling the failure handler
 								viewModel.OnAuthenticationFailure();
-								//Show fallback mechanism her
-								//showPasswordAlert();
 							}
 						}
 					});
-
 				});
 				context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, authenticationReason, replyHandler);
 			}
@@ -49,6 +47,5 @@ namespace SecurityFeatures.iOS
 				viewModel.OnAuthenticationFailure();
 			}
 		}
-
 	}
 }

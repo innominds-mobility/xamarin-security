@@ -15,9 +15,6 @@ namespace SecurityFeatures.Droid
 		public FingerprintAuthentication()
 		{
 		}
-		// Can be any byte array, keep unique to application.
-		static readonly byte[] SECRET_BYTES = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		// The TAG can be any string, this one is for demonstration.
 
 		public void fingerPrintDetection(Activity context)
 		{
